@@ -2,10 +2,12 @@ package com.example.examplemvvm.domain
 
 import com.example.examplemvvm.data.QuoteRepository
 import com.example.examplemvvm.data.model.QuoteModel
+import javax.inject.Inject
 
-class GetQuoteUseCase {
+class GetQuoteUseCase @Inject constructor(
+    private val repository: QuoteRepository
+) {
 
-    private val repository = QuoteRepository()
 
     suspend operator fun invoke():List<QuoteModel>? = repository.getAllQuotes()
 
