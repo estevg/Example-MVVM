@@ -1,4 +1,4 @@
-package com.example.examplemvvm.core
+package com.example.examplemvvm.di
 
 import com.example.examplemvvm.data.network.QuoteApiClient
 import dagger.Module
